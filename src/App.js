@@ -93,16 +93,7 @@ function App() {
             </select>
 
       <div className="equals">=</div>
-      {/*<CurrencyRow
-        currencyOptions={currencyOptions}
-        selectedCurrency = {toCurrency}
-        onchangeCurrency={ e => convert(e.target.value)}
-        amount = {toAmount}
-        name='to'
-
-
-/>*/}
-
+      
 <input value={toAmount} onChange={e => changeon1(Math.abs(e.target.value))}  type="number" className='input'/>
             <select  value={toCurrency}   onChange={e => convert(e.target.value)}>
             <option value={''} >Select currency</option>
