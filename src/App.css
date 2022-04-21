@@ -31,3 +31,11 @@ select{
     font-size: 30px;
     padding-right: 3rem;
 }
+
+.paper {
+    border: 1px solid black;
+    background: linear-gradient(255, 233, 200);
+    width: 500px;
+    height: 200px;
+
+}

@@ -1,6 +1,8 @@
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react";
 import "./App.css"
 import CurrencyRow from "./currencyRow"
+import { Paper} from "@material-ui/core";
+import Sidebar from "./Sidebar";
 
 const BASE_URL = "https://v6.exchangerate-api.com/v6/33ed23d9ac93ea6921766ee1/latest/"
 const base_code = 'USD'
@@ -18,18 +20,19 @@ function App() {
  const [toAmount, setToAmount] = useState('')
  const [fromAmount, setFromAmount] = useState('1')
 
- const convert = (value, amount='')=>{
-   //method resonsible for the conversion and its related algo
-  setToCurrency(value)
-  
- if(amount){
-    setToAmount(amount * fromAmount)
-  }
- else if (conversion_rates){
-    setToAmount(conversion_rates[value] * fromAmount)
-  }
 
- }
+ function convert(value, amount = '') {
+    //method resonsible for the conversion and its related algo
+    setToCurrency(value);
+
+    if (amount) {
+      setToAmount(amount * fromAmount);
+    }
+    else if (conversion_rates) {
+      setToAmount(conversion_rates[value] * fromAmount);
+    }
+
+  }
 
  const changeon = (value)=>{
   setFromAmount(value)
@@ -79,11 +82,13 @@ function App() {
        
       })
   }
+
   return (
     <>
+    <Sidebar/>
+      <Paper className="paper">
       <h1>Converter</h1>
-      <sidebar/>
-  
+      
   <input value={fromAmount} min={0}  onChange={e => changeon(Math.abs(e.target.value))}  type="number" className='input'/>
             <select  value={fromCurrency}   onChange={e => convertFrom(e.target.value)}>
             <option value={''} >Select currency</option>
@@ -101,8 +106,8 @@ function App() {
                      <option value={option} key={option}>{option}</option>
                 ))}    
             </select>
-
-    </>
+            </Paper>
+         </>
   )
 }
 
