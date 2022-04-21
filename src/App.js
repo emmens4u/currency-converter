@@ -82,7 +82,7 @@ function App() {
   return (
     <>
       <h1>Converter</h1>
-  
+      <sidebar/>
   
   <input value={fromAmount} min={0}  onChange={e => changeon(Math.abs(e.target.value))}  type="number" className='input'/>
             <select  value={fromCurrency}   onChange={e => convertFrom(e.target.value)}>
