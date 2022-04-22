@@ -17,7 +17,7 @@
 
 <body>
     <div id="sign_in">
-        <form action="">
+        <form action="../App.js">
             <span>Sign In</span>
             <div id="field">
                 <label for=""><i class="fas fa-user"></i></label>
@@ -30,7 +30,7 @@
             </div>
             <a href="./forgotpassword1.html">Forgot Password?</a>
             <div id="field">
-                <input type="submit" value="Log In" />
+                <input type="submit" value="Log In"  />  
             </div>
         </form>
         <p>
@@ -86,7 +86,10 @@
             let signUpForm = document.getElementById("sign_up");
             signUpForm.style.display = "block";
         });
-    </script>
-</body>
 
+        function clickedButton(){
+            window.location = '../App.js'
+        }
+    </script> 
+</body>
 </html>
