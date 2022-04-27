@@ -1,23 +1,48 @@
 
 body{
     margin: 0;
+    padding: 0;
     display: flex;
+    background-image: url(C:\Users\Preshlele\Desktop\AMALITECH\exchangeRate\currency-converter\public\istockphoto-1301106084-1024x1024.jpg);
     justify-content: center;
+    background-size: cover;
     align-items: center;
     min-height: 100vh;
-    text-align: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    
+    
 }
 
 h1{
     margin: 0;
     margin-bottom: 8px;
 }
-.input{
-    border: 1px solid #333;
-    border-radius: 4.8px;
-    padding: 4px;
-    width: 7em;
+input{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+height: 30px;
+width: 80%;
+border-radius: 20px;
+padding: 0.25rem;
+margin: 10px 8px 35px 15px;
+outline: none;
+background:  rgba(255, 255, 255, 0.15);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+backdrop-filter: blur(8.5px);
+color: #ffff;
 
+@media screen {
+    width: 80vw;
+    height: 90vh;
+}
+}
+input:focus{
+    display: inline-block;
+    box-shadow: 0 0 0 0.2rem rgb(212, 210, 210);
 }
 
 select{
@@ -31,6 +56,7 @@ select{
     font-weight: bold;
     font-size: 30px;
     padding-right: 3rem;
+    margin-left: 130px;
 }
 
 .paper {
@@ -39,4 +65,93 @@ select{
     width: 500px;
     height: 200px;
 
+}
+.loginCard{
+    position: relative;
+    width: 320px;
+    min-height: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+
+}
+
+h1{
+    position: relative;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: #ffffff; 
+}
+.inputLogin, .inputConvert{
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+    box-shadow: 0 5px 15px rgb(0, 0, 0, 0.05);
+
+}
+.inputLogin::placeholder{
+    color: white;
+}
+button{
+    background-color: white;
+    color: #666;
+    width: 30%;
+    height: 40px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: none;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-left: 20px;
+
+}
+.fgtPass{
+    color: rgb(64, 63, 63);
+    margin-left: 20px;
+}
+.selectConv{
+    color: black;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
 }

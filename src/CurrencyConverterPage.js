@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 const BASE_URL =
-  "https://v6.exchangerate-api.com/v6/8f3274796eb31900bc066351/latest/";
+ "https://v6.exchangerate-api.com/v6/8f3274796eb31900bc066351/latest/mklmo";
 const base_code = "USD";
 const fixedcurrency = "GHS";
 
@@ -89,7 +89,7 @@ function CurrrencyConverterPage() {
       {!authUser ? (
         <CurrencyLogin />
       ) : (
-        <div>
+        <div className="loginCard">
           <h1>Converter</h1>
 
           <input
@@ -97,12 +97,12 @@ function CurrrencyConverterPage() {
             min={0}
             onChange={(e) => changeon(Math.abs(e.target.value))}
             type="number"
-            className="input"
+            className="inputConvert"
           />
           <select
             value={fromCurrency}
             onChange={(e) => convertFrom(e.target.value)}
-          >
+          className="selectConv">
             <option value={""}>Select currency</option>
             {currencyOptions.map((option) => (
               <option value={option} key={option}>
@@ -117,16 +117,19 @@ function CurrrencyConverterPage() {
             value={toAmount}
             onChange={(e) => changeon1(Math.abs(e.target.value))}
             type="number"
-            className="input"
+            className="inputConvert"
           />
-          <select value={toCurrency} onChange={(e) => convert(e.target.value)}>
-            <option value={""}>Select currency</option>
+          <select value={toCurrency} onChange={(e) => convert(e.target.value)}
+          className="selectConv">
+            <option value={""} className="optionSelect">Select currency</option>
             {currencyOptions.map((option) => (
               <option value={option} key={option}>
                 {option}
               </option>
             ))}
           </select>
+
+          
         </div>
       )}
     </>

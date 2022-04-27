@@ -3,13 +3,15 @@ import CurrencyLogin from "./Component/CurrencyLogin"
 import CurrencyConverterPage from "./CurrencyConverterPage"
 
 
+
 function App() {
   return (
     <div className="App">
+      
       <Routes>
         
         <Route path="converter" element={ <CurrencyConverterPage/> } />
-        <Route path="login" element={ <CurrencyLogin/> } />
+        <Route path="" element={ <CurrencyLogin/> } />
       </Routes>
     </div>
   )
